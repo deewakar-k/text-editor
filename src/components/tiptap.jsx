@@ -1,4 +1,5 @@
-import { RiBold, RiH1, RiH2, RiItalic } from '@remixicon/react'
+import { RiBold, RiDoubleQuotesL, RiH1, RiH2, RiItalic } from '@remixicon/react'
+import Blockquote from '@tiptap/extension-blockquote'
 import Highlight from '@tiptap/extension-highlight'
 import Placeholder from '@tiptap/extension-placeholder'
 import Typography from '@tiptap/extension-typography'
@@ -13,6 +14,7 @@ function Tiptap() {
       StarterKit,
       Highlight,
       Typography,
+      Blockquote,
       Placeholder.configure({
         placeholder: 'Tell your story...',
         emptyEditorClass: 'is-editor-empty',
@@ -39,14 +41,21 @@ function Tiptap() {
         <span className='seperator'></span>
         <button
           onClick={() => editor.chain().focus().toggleItalic().run()}
-          className={editor.isActive('italic') ? 'is-active' : ''}
+          className={editor.isActive('italic') ? 'is-active text-green-200' : ''}
         >
           <RiItalic size={20} />
         </button>
         <span className='seperator'></span>
         <button onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}
-          className={editor.isActive('heading', { level: 2 }) ? 'is-active' : ''}>
+          className={editor.isActive('heading', { level: 2 }) ? 'is-active text-green-200' : ''}>
           <RiH2 size={20} />
+        </button>
+        <span className='seperator'></span>
+        <button
+          onClick={() => editor.chain().focus().toggleBlockquote().run()}
+          className={editor.isActive('blockquote') ? 'is-active' : ''}
+        >
+          <RiDoubleQuotesL size={20} />
         </button>
       </BubbleMenu >}
 

@@ -11,6 +11,13 @@
   font-size: 41px
 }
 
+blockquote {
+	 border-left: 3px solid black;
+	 margin: 1.5rem 0;
+	 padding-left: 1rem;
+}
+
+
 .tiptap h1 {
   font-size: 40px
 }
