@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@remixicon/react": "^4.2.0",
+    "@tiptap/extension-blockquote": "^2.6.4",
     "@tiptap/extension-highlight": "^2.6.3",
     "@tiptap/extension-placeholder": "^2.6.3",
     "@tiptap/extension-typography": "^2.6.3",

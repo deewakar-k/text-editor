@@ -2,16 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-.tiptap p.is-editor-empty:first-child::before {
+.tiptap h1.is-editor-empty:first-child::before {
   color: #adb5bd;
   content: attr(data-placeholder);
   float: left;
   height: 0;
   pointer-events: none;
-  font-size: 21px
+  font-size: 41px
 }
 
 .tiptap h1 {
-  font-size: 2rem
+  font-size: 40px
+}
+
+.tiptap p {
+  font-size: 21px
+}
+
+.seperator {
+  width: 1px;
+  color: #000;
+  margin: 0 0.4rem;
+}
+
+button:hover {
+  background-color: ;
 }
 
